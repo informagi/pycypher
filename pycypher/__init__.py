@@ -21,6 +21,7 @@ class ParseTreeVisitor(object):
         return {
             'result': result,
             'errors': errors,
+            'name': node.__class__.__name__.split('.')[-1][3:-7]
         }
 
     def visitTerminal(self, node):
